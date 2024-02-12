@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const { buscarHistoricoIPCA, buscarIPCAPorAno, buscarIPCAPorId, calcularReajuste } = require('./servicos/servicos');
+const { buscarHistoricoIPCA, buscarIPCAPorAno, buscarIPCAPorId, calcularReajuste, validacaoErro } = require('./servicos/servicos');
 
 app.get('/historicoIPCA/calculo', (req, res) => {
     const valor = parseFloat(req.query.valor);
